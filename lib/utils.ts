@@ -98,7 +98,16 @@ export const getDate = (date: Date) => {
  * @param price The price to format
  * @returns Formatted price string with Br symbol
  */
-export const formatPrice = (price: number | string): string => {
+export const formatPrice = (price: number | string | undefined | null): string => {
+  if (price === undefined || price === null) {
+    return 'Br 0.00';
+  }
+  
   const numericPrice = typeof price === 'string' ? parseFloat(price) : price;
+  
+  if (isNaN(numericPrice)) {
+    return 'Br 0.00';
+  }
+  
   return `Br ${numericPrice.toFixed(2)}`;
 };

@@ -30,7 +30,7 @@ axiosInstance.interceptors.request.use(
     }
     
     // Log request for debugging
-    console.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`, config.data);
+    
     
     return config;
   },
@@ -61,7 +61,7 @@ axiosInstance.interceptors.response.use(
       // Handle unauthorized errors
       if (error.response?.status === 401) {
         localStorage.removeItem('token');
-        window.location.href = '/login';
+        window.location.href = '/';
         toast.custom(<Toast message="Session expired. Please login again." status="error" />);
       }
 

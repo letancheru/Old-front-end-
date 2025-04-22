@@ -61,9 +61,7 @@ export default function Ad({ className }: AdProps) {
           
           // Find the store object to get the slug for routing
           const selectedStore = data.find((store: Shop) => store.id === storeId);
-          if (selectedStore) {
-            router.push(`/shops/${selectedStore.slug}`);
-          }
+          
         }
       } catch (error) {
         console.error("Error fetching stores:", error);
