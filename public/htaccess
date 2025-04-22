@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/elelannd/front.elelanmarket.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/elelannd/nodevenv/front.elelanmarket.com/20/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
